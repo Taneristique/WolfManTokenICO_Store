@@ -2,9 +2,15 @@
 
 To be able to use this application, please add metamask extension to your computer. You can find dependencies from package.json file but please be sure nodejs is installed on your pc and installing yarn package manager also would be good. 
 
-After you installed all the dependencies be sure that you have some goerli ethers than go to frontend from the terminal as writing 
-<code>cd client</code>
-than type <code>npm start</code> to start frontend of the project and experience 
+After you installed all the dependencies be sure that you have some goerli ethers than go to client from the terminal and run following lines
+<code>cd client
+      git clone "https://github.com/Taneristique/WolfManToken_FrontEnd.git" frontend
+      cd frontend  
+      npm install react-scripts
+      cd src 
+      npm install ethers@5.4.7
+</code>
+than run <code>npm start</code> command on the terminal to start frontend of the project and experience 
 how this ico store works.
 This contract has a fund saving option refund which pays back your money as WolfManToken if you wrongly sent 1 eth or more to the contract. Finally before forgetting the front end of the app did not build yet if you want to build run<code>npm run build</code>
 
