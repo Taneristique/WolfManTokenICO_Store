@@ -3,14 +3,13 @@
 To be able to use this application, please add metamask extension to your computer. You can find dependencies from package.json file but please be sure nodejs is installed on your pc and installing yarn package manager also would be good. 
 
 After you installed all the dependencies be sure that you have some goerli ethers than go to frontend from the terminal as writing 
-<code>cd frontend</code>
+<code>cd client</code>
 than type <code>npm start</code> to start frontend of the project and experience 
 how this ico store works.
 This contract has a fund saving option refund which pays back your money as WolfManToken if you wrongly sent 1 eth or more to the contract. Finally before forgetting the front end of the app did not build yet if you want to build run<code>npm run build</code>
 
 # Used Technologies
-<img src="https://raw.githubusercontent.com/github/explore/ba9de12f88fd08825c51928e91f1678cb5c94b26/topics/solidity/solidity.png" width="25" height="25">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" width="25" height="25">
+<img src="https://raw.githubusercontent.com/github/explore/ba9de12f88fd08825c51928e91f1678cb5c94b26/topics/solidity/solidity.png" width="25" height="25"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" width="25" height="25">
 
 # How to Redeploy Contract
 If you want to redeploy contract create an .env file in this path. And create 3 environment variables. These will be named as following lines: 
@@ -27,10 +26,10 @@ etherscanApi="your etherscan api key"
 After you done .env correctly. In case you changed something on WolfManToken.sol
 run <code>npx hardhat compile</code>.To be able to deploy it to the mainnet run
 <code>npx hardhat run scripts/deploy.js --network networkname //(e.g npx hardhat run scripts/deploy.js --network goerli) and verify the contract as running 
-npx hardhat verify --network networkname contractaddress command.
+npx hardhat verify --network networkname contractaddress command.</code>
 
 # ScreenShots Of WolfManToken ICO
-![Alt text](../first.png)
-![Alt text](../2nd.png)
-![Alt text](../buy.png)
-![Alt text](../transfer.png)
+![first](https://user![2nd](https://user-images.githubusercontent.com/48108872/229897975-fa4c082b-5be3-4618-b3b2-03136dd22fca.png)
+-images.githubusercontent.com/48108872/229897935-0293bd38-a188-4b57-b5d6-8f9940e50a76.png)
+![buy](https://user-images.githubusercontent.com/48108872/229898050-25c8ad48-66b0-48cd-8f36-fada905b324d.png)
+![transfer](https://user-images.githubusercontent.com/48108872/229898083-0a6a68c5-b8e7-4a42-b7d3-936a4f333741.png)
