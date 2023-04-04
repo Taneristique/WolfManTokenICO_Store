@@ -29,7 +29,11 @@ run <code>npx hardhat compile</code>.To be able to deploy it to the mainnet run
 npx hardhat verify --network networkname contractaddress command.</code>
 
 # ScreenShots Of WolfManToken ICO
-![first](https://user-images.githubusercontent.com/48108872/229899370-57ed653d-19da-4180-bac4-5b1a3ad92ad8.png)
+## Main Page
 ![2nd](https://user-images.githubusercontent.com/48108872/229899387-51661dde-5c2b-4b25-9e58-1d4a1aa2851a.png)
+## Account Page
+![first](https://user-images.githubusercontent.com/48108872/229899370-57ed653d-19da-4180-bac4-5b1a3ad92ad8.png)
+## Buy Token
 ![buy](https://user-images.githubusercontent.com/48108872/229898050-25c8ad48-66b0-48cd-8f36-fada905b324d.png)
+## Transfer Token
 ![transfer](https://user-images.githubusercontent.com/48108872/229898083-0a6a68c5-b8e7-4a42-b7d3-936a4f333741.png)
