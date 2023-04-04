@@ -1,6 +1,3 @@
-[submodule "WolfManToken_FrontEnd"]
-	path = WolfManToken_FrontEnd
-	url = https://github.com/Taneristique/WolfManToken_FrontEnd.git
 [submodule "client"]
 	path = client
 	url = https://github.com/Taneristique/WolfManToken_FrontEnd.git
