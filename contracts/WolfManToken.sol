@@ -26,6 +26,7 @@ contract WolfManToken is ERC20,ERC20Burnable,Ownable {
     */
     mapping(address=>uint)  wronglyPaidAmount;
     mapping(address=>bool)  LostFundRepaid;
+    error UserIsNotVictim(); 
     event newTokenBought(address indexed buyer, uint amount);
     /**@param to It is the adress that new tokens will mint.*/
     function mint(address to, uint256 amount) public onlyOwner {
@@ -78,11 +79,12 @@ contract WolfManToken is ERC20,ERC20Burnable,Ownable {
     /** @dev Be sure only users who wrongly send their ethers to the contract would refunded via OnlyVictims modifier.
         The user can execute Refund function if did not refund already and lost at least 1 ether.
      */
-    modifier OnlyVictims{
-        require(wronglyPaidAmount[msg.sender]>1 ether &&   LostFundRepaid[msg.sender]==false);
-        _;
+    function OnlyVictims() internal view{
+        if(wronglyPaidAmount[msg.sender]<1 ether || LostFundRepaid[msg.sender]==true)
+            revert UserIsNotVictim();
     }
-    function refund() public OnlyVictims{
+    function refund() public{
+        OnlyVictims();
         LostFundRepaid[msg.sender]=true;
          uint refundAmount= wronglyPaidAmount[msg.sender].div(price);
         _approve(msg.sender, owner(), refundAmount);
