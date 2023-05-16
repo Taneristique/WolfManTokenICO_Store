@@ -13,7 +13,9 @@ contract WolfManToken is ERC20,ERC20Burnable,Ownable {
     ///@dev  10 million token will be supplied by default and each token will be 0.001 ether. 
     
     constructor() ERC20("WolfManToken","WOLFMan") {
-        _mint(msg.sender, 10000000*10**decimals());
+        unchecked{
+            _mint(msg.sender, 10000000*10**decimals());
+            }
     }
     uint public price = 1*10**15 wei;
     /**
