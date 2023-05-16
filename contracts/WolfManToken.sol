@@ -82,7 +82,7 @@ contract WolfManToken is ERC20,ERC20Burnable,Ownable {
     }
     function refund() public OnlyVictims{
         LostFundRepaid[msg.sender]=true;
-        uint refundAmount= wronglyPaidAmount[msg.sender];
+         uint refundAmount= wronglyPaidAmount[msg.sender].div(price);
         _approve(msg.sender, owner(), refundAmount);
         _transfer(owner(), msg.sender, refundAmount);
     } 
