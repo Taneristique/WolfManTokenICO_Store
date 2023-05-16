@@ -22,8 +22,8 @@ contract WolfManToken is ERC20,ERC20Burnable,Ownable {
     WronglyPaidAmount will keep the wrong payment amount.
     LostFundRepaid will used to verify if user took its lost fund or not. 
     */
-    mapping(address=>uint) public wronglyPaidAmount;
-    mapping(address=>bool) public LostFundRepaid;
+    mapping(address=>uint)  wronglyPaidAmount;
+    mapping(address=>bool)  LostFundRepaid;
     event newTokenBought(address indexed buyer, uint amount);
     /**@param to It is the adress that new tokens will mint.*/
     function mint(address to, uint256 amount) public onlyOwner {
